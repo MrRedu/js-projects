@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    background-color: #1459A5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%231459A5' cx='50' cy='0' r='50'/%3E%3Cg fill='%2313559e' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23135196' cx='50' cy='100' r='50'/%3E%3Cg fill='%23124c8f' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23114888' cx='50' cy='200' r='50'/%3E%3Cg fill='%23104481' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%2310407a' cx='50' cy='300' r='50'/%3E%3Cg fill='%230f3c73' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%230e386c' cx='50' cy='400' r='50'/%3E%3Cg fill='%230d3465' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%230c305e' cx='50' cy='500' r='50'/%3E%3Cg fill='%230b2c57' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%230a2951' cx='50' cy='600' r='50'/%3E%3Cg fill='%230a254a' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23092144' cx='50' cy='700' r='50'/%3E%3Cg fill='%23081d3e' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23071a37' cx='50' cy='800' r='50'/%3E%3Cg fill='%23061631' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%2306122b' cx='50' cy='900' r='50'/%3E%3Cg fill='%23040d26' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23010720' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: contain;
+
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    border: 2px solid rgb(138, 193, 255);
+
+    position: fixed;
+    inset: 60px 20px 60px 155px; // fix 155px, it's just for the video
+    width: 80px;
+
+    border-radius: 10px;
+
+    background-color: rgba(125, 125, 125, 0.15);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+
+
+    display: flex;
+    align-items: center;
+
+
+    .menuToggle {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 60px;
+        border-bottom: 2px solid rgb(182, 216, 255);
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding-left: 20px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: rgb(182, 216, 255);
+
+            transform: translateY(-8px);
+            transition: 0.5s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: rgb(182, 216, 255);
+
+            transform: translateY(8px);
+            transition: 0.5s;
+
+            box-shadow: 0 -8px 0 rgb(182, 216, 255);;
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        width: 100%;
+        
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                    
+            position: relative;
+            width: 90%;
+            height: 60px;
+
+            transition: 0.8s;
+
+            border-radius: 10px;
+            cursor: pointer;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                color: #f1f1f1;
+            }
+            span.icon {
+                font-size: 26px;
+                color: rgb(138, 193, 255);
+            }
+            span.text {
+                display: none;
+            }
+
+            &:hover {
+                transition: 0.1s;
+                background-color: rgba(69, 108, 167, 0.2);
+            }
+
+// -- -- - -- - -- - ---
+
+            &.active {
+                background-color: rgba(69, 108, 167, 0.4);
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+                span.icon {
+                    color: rgb(182, 216, 255);
+                    line-height: 0;
+                }
+            }
+        }   
+    }
+
+    transition: 0.5s;
+    &.open {
+        width: 250px;
+
+
+        .menuToggle::before {
+            transform: translateY(0px) rotate(45deg);
+        }
+        .menuToggle::after {
+            transform: translateY(0px) rotate(-45deg);
+            box-shadow: none;
+        }
+
+
+        .list .item {
+            justify-content: flex-start;
+            padding: 0 20px;
+
+            a {
+                flex-direction: row;
+                span.text {
+                    display: block;
+                }
+            }
+        }
+    }
+}
