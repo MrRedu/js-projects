@@ -4,7 +4,8 @@ This is a repository of projects, made with HTML, CSS and JavaScript.
 <br>
 
 ### Projects
-1. [Vertical Menu](https://github.com/MrRedu/js-projects/tree/main/vertical-menu_js)
+1. [Slider cards](https://github.com/MrRedu/js-projects/tree/main/slider-cards_css)
+2. [Vertical menu](https://github.com/MrRedu/js-projects/tree/main/vertical-menu_js)
 
 
 ## Authors
