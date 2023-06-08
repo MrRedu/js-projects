@@ -1,4 +1,4 @@
-# Vertical Menu
+# Slider
 
 Demonstrating video
 
